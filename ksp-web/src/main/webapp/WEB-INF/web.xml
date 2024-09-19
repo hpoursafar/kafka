@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+    <distributable/>
+    <!--    <security-constraint>
+            <web-resource-collection>
+                <web-resource-name>PAGES</web-resource-name>
+                <url-pattern>/ui/*</url-pattern>
+                <http-method>GET</http-method>
+                <http-method>POST</http-method>
+            </web-resource-collection>
+            <auth-constraint>
+                <role-name>user</role-name>
+            </auth-constraint>
+        </security-constraint>
+
+        <security-constraint>
+            <web-resource-collection>
+                <web-resource-name>REST</web-resource-name>
+                <url-pattern>/api/*</url-pattern>
+                <http-method>GET</http-method>
+                <http-method>POST</http-method>
+                <http-method>PUT</http-method>
+                <http-method>DELETE</http-method>
+            </web-resource-collection>
+            <auth-constraint>
+                <role-name>user</role-name>
+            </auth-constraint>
+        </security-constraint>
+
+        <login-config>
+            <auth-method>BASIC</auth-method>
+            <realm-name>myrealm</realm-name>
+        </login-config>
+
+        <security-role>
+            <role-name>admin</role-name>
+        </security-role>
+        <security-role>
+            <role-name>user</role-name>
+        </security-role>
+      -->
+    <jsp-config>
+        <taglib>
+            <taglib-uri>http://tamin.ir/framework-core</taglib-uri>
+            <taglib-location>/WEB-INF/tlds/framework.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+
+    <filter>
+        <filter-name>CORSFilter</filter-name>
+        <filter-class>ir.tamin.framework.web.filter.CORSFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CORSFilter</filter-name>
+        <url-pattern>/templates/*</url-pattern>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>GzipFilter</filter-name>
+        <filter-class>org.eclipse.jetty.servlets.GzipFilter</filter-class>
+        <async-supported>true</async-supported>
+        <init-param>
+            <param-name>minGzipSize</param-name>
+            <param-value>1000</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>GzipFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- Filter for caching contents. Must come before NoCacheFilter -->
+    <filter>
+        <filter-name>CacheFilter</filter-name>
+        <filter-class>ir.tamin.framework.web.filter.CacheFilter</filter-class>
+        <async-supported>true</async-supported>
+        <init-param>
+            <param-name>expiryTimeInMillis</param-name>
+            <param-value>14400000</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CacheFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+</web-app>

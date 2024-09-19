@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-ejb-jar xmlns="http://www.bea.com/ns/weblogic/90" xmlns:j2ee="http://java.sun.com/xml/ns/j2ee"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://www.bea.com/ns/weblogic/90 http://www.bea.com/ns/weblogic/90/weblogic-ejb-jar.xsd">
+
+    <!--
+    <weblogic-enterprise-bean>
+        <ejb-name>CalculationFunctionService</ejb-name>
+        <dispatch-policy>WorkManager-0</dispatch-policy>
+    </weblogic-enterprise-bean>
+    <weblogic-enterprise-bean>
+        <ejb-name>MonthlyPaymentService</ejb-name>
+        <dispatch-policy>WorkManager-0</dispatch-policy>
+    </weblogic-enterprise-bean>
+    <weblogic-enterprise-bean>
+        <ejb-name>PaymentDetailService</ejb-name>
+        <dispatch-policy>WorkManager-0</dispatch-policy>
+    </weblogic-enterprise-bean>
+    <weblogic-enterprise-bean>
+        <ejb-name>PaymentLevelJMSListener</ejb-name>
+        <dispatch-policy>WorkManager-0</dispatch-policy>
+    </weblogic-enterprise-bean>
+    <weblogic-enterprise-bean>
+        <ejb-name>PaymentLevelJMSQueue</ejb-name>
+        <dispatch-policy>WorkManager-0</dispatch-policy>
+    </weblogic-enterprise-bean>
+    <weblogic-enterprise-bean>
+        <ejb-name>BranchLevelJMSQueue</ejb-name>
+        <dispatch-policy>WorkManager-0</dispatch-policy>
+    </weblogic-enterprise-bean>
+    <weblogic-enterprise-bean>
+        <ejb-name>BranchLevelJMSListener</ejb-name>
+        <dispatch-policy>WorkManager-0</dispatch-policy>
+    </weblogic-enterprise-bean>
+    <weblogic-enterprise-bean>
+        <ejb-name>IncreaseJMSListener</ejb-name>
+        <dispatch-policy>WorkManager-0</dispatch-policy>
+    </weblogic-enterprise-bean>
+    <weblogic-enterprise-bean>
+        <ejb-name>PensionerDispatcherJMSListener</ejb-name>
+        <dispatch-policy>WorkManager-0</dispatch-policy>
+    </weblogic-enterprise-bean>
+    -->
+</weblogic-ejb-jar>
